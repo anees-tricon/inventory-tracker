@@ -20,5 +20,13 @@ branches:
 #   allow_failures:
 #     - node_js: latest
 
-script: skip
+#   fast_finish: true
 
+jobs:
+  include:
+  - stage: test
+    script: node -e "console.log('Hi from NodeJS!')"
+    script: node -e "console.log('test 1 from NodeJS!')"
+    script: node -e "console.log('test 2 from NodeJS!')"
+  - stage: deploy
+    script: node node -e "console.log('Deploy script')"
