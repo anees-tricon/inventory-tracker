@@ -9,15 +9,16 @@ branches:
   only:
     - travis-test
 
-matrix:
-  include:
-    - node_js: 8
-    - node_js: 10
-    - node_js: latest
-    - node_js: stable
+# https://docs.travis-ci.com/user/build-matrix/
+# matrix:
+#   include:
+#     - node_js: 8
+#     - node_js: 10
+#     - node_js: latest
+#     - node_js: stable
 
-  allow_failures:
-    - node_js: latest
+#   allow_failures:
+#     - node_js: latest
 
 script: skip
 
