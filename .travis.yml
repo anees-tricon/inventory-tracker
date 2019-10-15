@@ -15,12 +15,16 @@ branches:
 matrix:
   include:
     - node_js: 8
+      script: skip
 
     - node_js: 10
+      script: skip
 
     - node_js: latest
+      script: skip
 
     - node_js: stable
+      script: skip
 
 script: skip
 
