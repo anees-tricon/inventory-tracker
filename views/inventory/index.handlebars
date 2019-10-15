@@ -1,0 +1,13 @@
+{{#each items}}
+  <div class="card card-body mb-2">
+    <h4>{{category}}</h4>
+    <p>{{name}}</p>
+    <a class="btn btn-dark btn-block mb-2" href="/inventory/edit/{{id}}">Edit</a>
+    <form method="post" action="/inventory/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger btn-block" value="Delete">
+    </form>
+  </div>
+{{else}}
+  <p>No Items added to the inventory</p>
+{{/each}}
