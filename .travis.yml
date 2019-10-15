@@ -25,8 +25,8 @@ branches:
 jobs:
   include:
   - stage: test
-    script: node -e "console.log('Hi from NodeJS!')"
-    script: node -e "console.log('test 1 from NodeJS!')"
-    script: node -e "console.log('test 2 from NodeJS!')"
+    script: node -e "console.log('test 0 from NodeJS!')"
+  - script: node -e "console.log('test 1 from NodeJS!')"
+  - script: node -e "console.log('test 2 from NodeJS!')"
   - stage: deploy
-    script: node node -e "console.log('Deploy script')"
+    script: node -e "console.log('Deploy script')"
