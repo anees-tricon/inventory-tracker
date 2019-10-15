@@ -9,5 +9,5 @@ branches:
   only:
     - travis-test
 
-
+script: false
 
