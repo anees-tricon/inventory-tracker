@@ -16,7 +16,7 @@ matrix:
       script: skip
 
     - language: node_js
-      node_js: stable
+      node_js: latest
       script: skip
 
 script: skip
