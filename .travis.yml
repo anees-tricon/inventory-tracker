@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - 8
-  - 10
-  - stable
 
 git:
   depth: false
@@ -10,6 +8,16 @@ git:
 branches:
   only:
     - travis-test
+
+matrix:
+  include:
+    - language: node_js
+      node_js: 10
+      script: skip
+
+    - language: node_js
+      node_js: stable
+      script: skip
 
 script: skip
 
