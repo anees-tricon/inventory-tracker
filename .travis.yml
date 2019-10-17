@@ -25,6 +25,8 @@ branches:
 stages:
   - compile
   - test
+  - dummy 1
+  - dummy 2
   - deploy
 
 jobs:
@@ -38,3 +40,7 @@ jobs:
     name: "Test 2"
   - stage: deploy
     script: node -e "console.log('Deploy script')"
+  - stage: dummy 1
+    script: node -e "console.log('dummy script 1')"
+  - stage: dummy 2
+    script: node -e "console.log('dummy script 2')"
