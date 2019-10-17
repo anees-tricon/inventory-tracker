@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 8
-
+  - 12.12.0
 git:
   depth: false
 
@@ -41,6 +41,7 @@ jobs:
   - stage: deploy
     script: node -e "console.log('Deploy script')"
   - stage: dummy 1
-    script: node -e "console.log('dummy script 1')"
+    script: node -v
   - stage: dummy 2
-    script: node -e "console.log('dummy script 2')"
+    script: node -v
+  - script: npm -v
